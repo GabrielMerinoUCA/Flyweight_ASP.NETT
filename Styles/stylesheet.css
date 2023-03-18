@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.principal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+}
+
+.secundario {
+    padding: 15px;
+    border-width: thick;
+    border-style: solid;
+    border-color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+}
+
+
+.label {
+    margin-right: 25px;
+}
+
+.priceElement {
+    clear: both;
+    float: right;
+    display: inline-block;
+    margin-right: 15px;
+    color: red;
+    font-size: 15px;
+}
+
+.cellBorder {
+    border-width: thin;
+    border-color: darkslateblue;
+    border-style: outset;
+}
