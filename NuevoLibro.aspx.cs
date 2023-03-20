@@ -10,8 +10,11 @@ namespace Flyweight_Pattern
 {
     public partial class NuevoLibro : System.Web.UI.Page
     {
+        private Store s;
         protected void Page_Load(object sender, EventArgs e)
         {
+            s = new Store();
+            s.LoadFromDataBase();
         }
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -21,7 +24,7 @@ namespace Flyweight_Pattern
             string autor = tbAutor.Text;
             string extras = tbExtras.Text;
 
-            Store.storeBook(titulo, precio, tipo, autor, extras);
+            s.saveToDataBase(titulo, precio, tipo, autor, extras);
             Response.Redirect("~\\Default.aspx");
         }
     }

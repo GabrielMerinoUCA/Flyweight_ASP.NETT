@@ -5,10 +5,16 @@ using System.Web;
 
 namespace Flyweight_Pattern.Buisness
 {
-    public static class BookTypeFactory
+    public class BookTypeFactory
     {
-        public static Dictionary<string, BookType> bookTypes = new Dictionary<string, BookType>();
-        public static BookType getBookType(string types, string author, string other)
+        public  Dictionary<string, BookType> bookTypes;
+
+        public BookTypeFactory()
+        {
+            this.bookTypes = new Dictionary<string, BookType>();
+        }
+
+        public BookType getBookType(string types, string author, string other)
         {
             if (!bookTypes.ContainsKey(types))
             {
@@ -16,5 +22,6 @@ namespace Flyweight_Pattern.Buisness
             }
             return bookTypes[types];
         }
+        
     }
 }
